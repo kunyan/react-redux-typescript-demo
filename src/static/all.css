@@ -1,0 +1,129 @@
+#head {
+  width: 100px;
+  height: 100px;
+  background: rgb(238, 209, 182);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+
+#upperBody {
+  width: 150px;
+  height: 200px;
+  background: rgb(238, 209, 182);
+  margin: 0 auto;
+}
+
+#lowerBody {
+  width: 120px;
+  height: 200px;
+  border-top: 70px solid rgb(238, 209, 182);
+  border-left: 50px solid rgb(238, 209, 182);
+  border-right: 50px solid rgb(238, 209, 182);
+  margin: 0 auto;
+}
+
+#foot {
+  width: 150px;
+  height: 20px;
+  border-left: 65px solid rgb(238, 209, 182);
+  border-right: 65px solid rgb(238, 209, 182);
+  margin: 0 auto;
+}
+
+#redhat {
+  border-bottom: 40px solid rgb(204, 0, 0);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: 90px;
+  position: relative;
+  margin: 0 auto;
+}
+#redhat:before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  width: 130px;
+  height: 10px;
+  background-color: rgb(204, 0, 0);
+}
+
+#tshirt {
+  width: 150px;
+  height: 200px;
+  background: rgb(204, 0, 0);
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Overpass', 'Open Sans', Helvetica, sans-serif !important;
+  padding-top: 30px;
+}
+
+strong {
+  font-size: 23px;
+}
+
+#jeans {
+  position: relative;
+  top: -70px;
+  left: -50px;
+  height: 200px;
+  width: 120px;
+  height: 200px;
+  /* background: rgb(48, 106, 172); */
+  border-top: 70px solid rgb(48, 106, 172);
+  border-left: 50px solid rgb(48, 106, 172);
+  border-right: 50px solid rgb(48, 106, 172);
+  margin: 0 auto;
+}
+
+#shoes {
+  position: relative;
+  width: 150px;
+  height: 20px;
+  left: -65px;
+  border-left: 65px solid black;
+  border-right: 65px solid black;
+  margin: 0 auto;
+}
+
+.icon {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+#glasses {
+  width: 1.8em;
+  height: 2em;
+  border-top: 3px solid black;
+  border-radius: 50%;
+}
+#glasses:before {
+  content: '';
+  position: absolute;
+  top: -0.2em;
+  left: -1.3em;
+  width: 1.7em;
+  height: 1.5em;
+  border: 5px solid black;
+  border-radius: 35% 35% 35% 35%;
+}
+#glasses:after {
+  content: '';
+  position: absolute;
+  top: -0.2em;
+  left: 1.5em;
+  width: 1.7em;
+  height: 1.5em;
+  border: 5px solid black;
+  border-radius: 35% 35% 35% 35%;
+}
