@@ -41,7 +41,20 @@
   position: relative;
   margin: 0 auto;
 }
-#redhat:before {
+
+#redhat:before{
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  border-bottom: 10px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  height: 10px;
+  width: 90px;
+}
+
+#redhat:after {
   content: '';
   position: absolute;
   top: 30px;
