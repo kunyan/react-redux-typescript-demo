@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { wearHat, wearGlasses, wearUpperClothes, wearShoes, wearLowerClothes } from '../redux/actions/humanAction';
+import { wearHat, wearGlasses, wearUpperClothes, wearShoes, wearLowerClothes, putAll } from '../redux/actions/humanAction';
 
 interface IProps {
     dispatch?: any;
@@ -27,6 +27,14 @@ class Toolbox extends React.Component<IProps> {
         this.props.dispatch(wearShoes('shoes'));
     }
 
+    onPutAllOn = () => {
+        this.props.dispatch(putAll('redhat', 'glasses', 'tshirt', 'jeans', 'shoes'));
+    }
+
+    onStrippedOff = () => {
+        this.props.dispatch(putAll(null, null, null, null, null));
+    }
+
     render() {
         return (
             <div>
@@ -36,6 +44,8 @@ class Toolbox extends React.Component<IProps> {
                     <li><a href="javascript:;" onClick={this.onWearUpperClothes}>Wear a T-shirt</a></li>
                     <li><a href="javascript:;" onClick={this.onWearLowerClothes}>Wear a trousers</a></li>
                     <li><a href="javascript:;" onClick={this.onWearShoes}>Wear a shoes</a></li>
+                    <li><a href="javascript:;" onClick={this.onPutAllOn}>Put all on</a></li>
+                    <li><a href="javascript:;" onClick={this.onStrippedOff}>Stripped Off</a></li>
                 </ul>
             </div>
         );

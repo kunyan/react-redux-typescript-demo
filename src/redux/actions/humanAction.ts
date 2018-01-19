@@ -67,6 +67,22 @@ const recieveShoes = createAction<IActionShoes, IActionMeta>(
   (meta) => ({ meta }),
 );
 
+const requestPutAll = createAction(types.REQUEST_PUT_ALL);
+const recievePutAll = createAction<
+  IActionHat & IActionGlasses & IActionUpperClothes & IActionLowerClothes & IActionShoes,
+  IActionMeta
+>(
+  types.RECIEVE_PUT_ALL,
+  (hat: string, glasses: string, upperClothes: string, lowerClothes: string, shoes: string) => ({
+    hat,
+    glasses,
+    upperClothes,
+    lowerClothes,
+    shoes,
+  }),
+  (meta) => ({ meta }),
+);
+
 export function wearHat(hat: string) {
   return async (dispatch: any) => {
     dispatch(requestHat());
@@ -99,5 +115,12 @@ export function wearShoes(shoes: string) {
   return async (dispatch: any) => {
     dispatch(requestShoes());
     dispatch(recieveShoes(shoes));
+  };
+}
+
+export function putAll(hat: string, glasses: string, upperClothes: string, lowerClothes: string, shoes: string) {
+  return async (dispatch: any) => {
+    dispatch(requestPutAll());
+    dispatch(recievePutAll(hat, glasses, upperClothes, lowerClothes, shoes));
   };
 }
